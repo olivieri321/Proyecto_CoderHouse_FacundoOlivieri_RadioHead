@@ -1,0 +1,749 @@
+@import "variables/variables";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+/**
+ * ----------------------------------------
+ * animation fade-in-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-top {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-top {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.fade-in-top {
+	-webkit-animation: fade-in-top 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.fade-in-left {
+	-webkit-animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:$color_2;
+    -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+a{
+    text-align: center;
+    margin: 0%;
+    text-decoration: none !important;
+    color: white !important;
+    font-size: larger;
+    
+}
+body{
+    background-color: $color_1!important;
+    width: 100%;
+}
+/*mains*/
+.main_contacto{
+    height: 92vh;
+    background-image: url(/img/contacto.gif);
+    background-position: center;
+}
+.main_home{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.main_tour{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+}
+.mainalbum{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+}
+/*logo*/
+.espacio_logo{
+    background-color: black;
+}
+.logo{
+    display: none;
+}
+/*menu de navegacion*/
+
+.boton_navegacion{
+    border-radius: 2px;
+    overflow-y: hidden;
+    &:hover{
+        .nav-link{
+            transition: 0.5s;
+            color: $color_2 !important;
+            font-size: larger;
+        }
+    }
+}
+.seleccionado{
+    transition: 0.5s;
+    color: $color_2 !important;
+}
+.navbar{
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+/*index*/
+.presentacion_home{
+    width: auto;
+}
+.imagen_presentacion_home{
+    height: calc(100vh - 60px) !important;
+    overflow-y:hidden;
+    background-image:url(../img/gif1.gif);
+    background-size: cover;
+    background-position: center;
+    .area_descripcion{
+        background-color: rgba(18, 20, 27, 0.6);
+        width: 100%;
+        height: 100%;
+        color: white;
+        
+        h1{
+            margin-top: 40%;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            margin: 0%;
+        }
+        .botones{
+            margin-left: 20%;
+            margin-right: 20%;
+            width: 60%;
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            a{
+                width: 45%;
+                .btn{
+                    width: 100%
+                }
+            }
+        }
+    }
+}
+.gif2{
+    background-image: url(../img/gif2.gif);
+    background-position: center;
+    height: 1800px !important;
+    .area_descripcion{
+        display: flex;
+        flex-direction:column;
+        justify-items:center;
+        flex-wrap: nowrap;
+        background-color: rgba(18, 20, 27, 0.6);
+        width: 100%;
+        height: 100%;
+        color: white;
+        .caja_ticket{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            margin-left: 10%;
+            margin-top: 3.5%;
+            height: 600px;
+            width: 80%;
+            background-color: rgba(18, 20, 27, 0.6);
+            .imagen_ticket{
+                width: 95%;
+                height: 35%;
+                background-color:transparent;
+                margin-left: 2.5%;
+                margin-top: 1.5%;
+            }
+            .descripcion_ticket{
+                width: 95%;
+                height: 55%;
+                margin-left: 2.5%;
+                margin-top: 3.5%;
+                text-align: center;
+                .btn{
+                    width: 45%;
+                    height: 25%;
+                    margin-top: 15%;
+                    background-color: rgba(18, 20, 27, 1.0);
+                    border-color: rgba(1, 21, 94, 0.651);
+                }
+            }
+            .ticket3{
+                background-image: url(../img/ticket_VIP.png);
+                background-size: 60%;
+                background-position: center;
+                background-repeat: no-repeat;
+                &:focus{
+                    @extend .fade-in-left
+                }
+            }
+            .ticket2{
+                background-image: url(../img/ticket_premium.png);
+                background-size: 60%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .ticket1{
+                background-image: url(../img/ticket_basico.png);
+                background-size: 60%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.descripcion_presentacion_home{
+    display:block;
+    width: 100%;
+    /*background-color: #513451;*/
+    color: white;
+    background-color: var(--color_3);
+    text-align: center;
+    height: 25px;
+}
+/*tour*/
+.descripcion_tour_principal{
+    background-color: $color_1;
+    margin-top: 105px;
+    color: white;
+    text-align: center;
+    height: 6%;
+    font-size: medium;
+    h5{
+        margin-top: 5px;
+    }
+}
+.descripcion_tour{
+    margin-top: 55px;
+    color: white;
+    text-align: center;
+}
+.descripcion_tour2{
+    @extend .descripcion_tour;
+    margin-top: 0px;
+}
+.mapa_tour{
+    width: 100%;
+    margin-left: 15%;
+
+}
+/*album*/
+.playlist1{
+    width:100% ;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius:12px;
+    iframe{
+        z-index: 2;
+        margin-bottom: -6.5%;
+        height: 480px;
+    }
+    h3{
+        margin-top: 5%;
+        background-color: rgb(28,1,1);
+        z-index: 1;
+        height: 30px;
+        margin-bottom: -0.2%;
+    }
+    h4{
+        background-color: rgb(28,1,1);
+        z-index: 1;
+        font-size: medium;
+        border-bottom-left-radius: 2%;
+        border-bottom-right-radius: 2%;
+    }
+}
+.playlist2{
+    @extend .playlist1
+}
+.playlist3{
+    @extend .playlist1
+}
+.descripcion_album{
+    margin-top: 55px !important;
+    background-color: rgb(35, 46, 46);
+    color: white;
+    background-image: url(/img/album.gif);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h3{
+        text-align: center;
+    }
+}
+.capa_album{
+    background-color: rgba(18, 20, 27, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.capa2_descripcion_album{
+    background-color: rgba(18, 20, 27, 0.5);
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+/*imagenes*/
+.galeria_imagenes{
+    margin-top: 55px !important;
+    background-color: $color_2;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    width: 100%;
+}
+/*contacto*/
+.contacto_formulario{
+    background-color:$color_3;
+    color: white;
+    border-radius: 1%;
+    margin-top: 15vh !important;
+}
+.orden_boton_contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.boton_form{
+    margin-right: 0.5%;
+}
+/*footer*/
+footer{
+    background-color: $color_3;
+    text-align: center;
+    display: grid;
+    grid-template-areas:"contacto nada redes"
+                        "contacto nada redes";
+    width: 100%;
+    h1{
+        text-align: center;
+        width: 100%;
+        color: white !important;
+        margin-top: 3%;
+    }
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        grid-area: contacto;
+        justify-content: center;
+        div{
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+    }
+    .redes{
+        grid-area: redes;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        i{
+            margin-left: 30%;
+        }
+    }
+}
+
+/*Responsive*/
+
+
+
+@media only screen and ( min-width: 600px) and ( max-width: 992px){
+    .imagen_presentacion_home{
+        height: 400px;
+    }
+    .gif2{
+        background-image: url(../img/gif2.gif);
+        height: 1800px !important;
+        .area_descripcion{
+            display: flex;
+            flex-direction:column;
+            justify-items:center;
+            flex-wrap: nowrap;
+            background-color: rgba(18, 20, 27, 0.6);
+            width: 100%;
+            height: 100%;
+            color: white;
+            .caja_ticket{
+                display: flex;
+                justify-items: center;
+                flex-direction: column;
+                margin-left: 10%;
+                margin-top: 3.5%;
+                height: 600px;
+                width: 80%;
+                background-color: rgba(18, 20, 27, 0.6);
+                .imagen_ticket{
+                    width: 95%;
+                    height: 35%;
+                    background-color:transparent;
+                    margin-left: 2.5%;
+                    margin-top: 1.5%;
+                }
+                .descripcion_ticket{
+                    width: 95%;
+                    height: 45%;
+                    margin-left: 2.5%;
+                    margin-top: 3.5%;
+                    text-align: center;
+                }
+                .ticket3{
+                    background-size: 40%;
+                }
+                .ticket2{
+                    background-size: 40%;
+                }
+                .ticket1{
+                    background-size: 40%;
+                }
+            }
+        }
+    }
+    .area2{
+        background-image:image("img/integrantes.jfif");
+    }
+    .navegacion{
+        width: 50%;
+        justify-content: space-between;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    a{
+        font-size:large;
+    }
+    /*album*/
+    .playlist1{
+        display: block;
+        width: 80%;
+        grid-area: a2;
+        margin-left: 10%;
+    }
+    .logo{
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .playlist2{
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        grid-area: a3;
+    }
+    .playlist3{
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        grid-area: a4;
+    }
+    .descripcion_album{
+        background-color: rgb(35, 46, 46);
+        color: white;
+        background-image: url(/img/album.gif);
+        background-repeat:no-repeat;
+        background-size: cover;
+        height: auto;
+    }
+    .capa2_descripcion_album{
+        background-color: rgba(18, 20, 27, 0.5);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        grid-area: a1;
+    }
+    .mainalbum{
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+    .contacto_formulario{
+        margin:0% 1% 0% 1%;
+    }
+    .galeria_imagenes{
+        background-color: $color_2;
+        display: grid;
+        grid-template-areas:"img1 img2 img3"
+                            "img4 img5 img6";
+        justify-content:center;
+        width: 100%;
+    }
+    
+
+}
+@media only screen and ( min-width: 992px){
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        overflow-y: hidden;
+    }
+    .navegacion{
+        width: 50%;
+        justify-content: space-between;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    a{
+        font-size:larger;
+    }
+    /*index*/
+    .imagen_presentacion_home{
+        height: 400px;
+    }
+    .gif2{
+        background-image: url(../img/gif2.gif);
+        height: 700px !important;
+        .area_descripcion{
+            display: flex;
+            flex-direction:row;
+            justify-items:center;
+            flex-wrap: nowrap;
+            background-color: rgba(18, 20, 27, 0.6);
+            width: 100%;
+            height: 100%;
+            color: white;
+            .caja_ticket{
+                display: flex;
+                justify-items: center;
+                flex-direction: column;
+                margin-left: 10%;
+                margin-top: 3.5%;
+                height: 600px;
+                width: 20%;
+                background-color: rgba(18, 20, 27, 0.8);
+                .imagen_ticket{
+                    width: 95%;
+                    height: 45%;
+                    margin-left: 2.5%;
+                    margin-top: 1.5%;
+                }
+                .descripcion_ticket{
+                    width: 95%;
+                    height: 50%;
+                    margin-left: 2.5%;
+                    margin-top: 3.5%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .area_descripcion{
+        background-color: rgba(18, 20, 27, 0.6);
+        width: 100%;
+        height: 100%;
+        color: white;
+        h1{
+            margin-top: 10%!important;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            margin: 0%;
+        }
+    }
+    
+    /*album*/
+    .playlist1{
+        display: block;
+        width: 80%;
+        margin-top: 15%;
+        z-index: 2;
+        iframe{
+            z-index: 2;
+            margin-bottom: -7%;
+            height: 475px;
+        }
+        h3{
+            margin: 0%;
+            height: 50px;
+            z-index: 1;
+        }
+        h4{
+            margin-top: -3%;
+            font-size: large;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            z-index: 1;
+        }
+    }
+    .playlist2{
+        display: block;
+        width: 80%;
+    }
+    .playlist3{
+        display: block;
+        width: 80%;
+    }
+    .descripcion_album{
+        background-color: rgb(35, 46, 46);
+        grid-area: a1;
+        color: white;
+        background-image: url(/img/album.gif);
+        background-repeat:no-repeat;
+        background-size: cover;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        h3{
+            margin-top: 5%;
+        }
+    }
+    .capa2_descripcion_album{
+        background-color: rgba(18, 20, 27, 0.5);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .mainalbum{
+        width: 100%;
+        height: 950px;
+    }
+    /*contacto*/
+    .contacto_formulario{
+        margin:0% 1% 0% 1%;
+    }
+    /*imagenes*/
+    .galeria_imagenes{
+        background-color: var(--color_2);
+        display: grid;
+        grid-template-areas:"img1 img2 img3"
+                            "img4 img5 img6"
+                            "img7 img8 img9"
+                            "img10 img11 img12";
+        justify-content: space-between;
+        grid-template-columns: 33% 33% 33%;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 98.5%;
+        }
+    }
+    /*tour*/
+    .area_descripcion{
+        height: 100%;
+    }
+    .area1{
+        grid-area: a1;
+    }
+    .area2{
+        grid-area: a2;
+    }
+    .area3{
+        grid-area: a3;
+    }
+    .area4{
+        grid-area: a4;
+    }
+    .main_tour{
+        background-image: url(/img/gif2.gif);
+        height: 90vh;
+    }
+    .zona_tour{
+        display:grid;
+        grid-template-areas:"a1 a1"
+                            "a2 a3";
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 5%;
+        justify-content: space-around;
+    }
+    .tabla1{
+        grid-area: a2;
+    }
+    .tabla2{
+        grid-area: a3;
+    }
+    .descripcion_tour_principal{
+        background-color: $color_1;
+        margin-top: 50px;
+        color: white;
+        text-align: center;
+        height: 85px;
+        h5{
+            margin-top: 25px;
+        }
+
+    }
+    .descripcion_tour2{
+        background-color: rgb(33,37,41);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .descripcion_tour{
+        background-color: rgb(33,37,41);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 0%;
+    }
+
+}
