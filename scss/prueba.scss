@@ -61,6 +61,7 @@
 	-webkit-animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -120,11 +121,16 @@ body{
     width: 100%;
 }
 /*logo*/
-.espacio_logo{
-    background-color: black;
-}
-.logo{
-    display: none;
+.link_logo{
+    height: 43px;
+    width: 43px;
+    background-image: url(../img/logo.jpg);
+    background-size: cover;
+    position: fixed;
+    margin-left: 80%;
+    margin-top: 5px;
+    z-index: 4;
+    display: inherit;
 }
 /*menu de navegacion*/
 
@@ -546,6 +552,17 @@ footer{
         height: 50px;
         overflow-y: hidden;
     }
+    .link_logo{
+        height: 45px;
+        width: 45px;
+        background-image: url(../img/logo.jpg);
+        background-size: cover;
+        position: fixed;
+        margin: 0%;
+        margin-left: 5%;
+        margin-top: 2px;
+        display: inherit;
+    }
     .navegacion{
         width: 50%;
         justify-content: space-between;
@@ -582,13 +599,13 @@ footer{
                 background-color: rgba(18, 20, 27, 0.8);
                 .imagen_ticket{
                     width: 95%;
-                    height: 45%;
+                    height: 30%;
                     margin-left: 2.5%;
                     margin-top: 1.5%;
                 }
                 .descripcion_ticket{
                     width: 95%;
-                    height: 50%;
+                    height: 70%;
                     margin-left: 2.5%;
                     margin-top: 3.5%;
                     text-align: center;
@@ -602,7 +619,7 @@ footer{
         height: 100%;
         color: white;
         h1{
-            margin-top: 10%!important;
+            margin-top: 18%!important;
             text-align: center;
         }
         p{
@@ -707,6 +724,8 @@ footer{
     .main_tour{
         background-image: url(/img/gif2.gif);
         height: 90vh;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .zona_tour{
         display:grid;
@@ -738,12 +757,18 @@ footer{
         background-color: rgb(33,37,41);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        h1{
+            margin:0% !important;
+        }
     }
     .descripcion_tour{
         background-color: rgb(33,37,41);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         margin: 0%;
+        h1{
+            margin:0% !important;
+        }
     }
 
 }
