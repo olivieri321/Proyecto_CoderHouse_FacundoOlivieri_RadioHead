@@ -1,9 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-/**
- * ----------------------------------------
- * animation fade-in-top
- * ----------------------------------------
- */
+/*animation fade-in-top*/
 @-webkit-keyframes fade-in-top {
   0% {
     -webkit-transform: translateY(-50px);
@@ -52,6 +48,7 @@
   -webkit-animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
+/*scroll*/
 ::-webkit-scrollbar {
   width: 12px; }
 
@@ -64,6 +61,7 @@
   background-color: #e9a830;
   -webkit-box-shadow: inset 0 0 6px rgba(90, 90, 90, 0.7); }
 
+/*General*/
 * {
   margin: 0%;
   padding: 0%;
@@ -127,7 +125,7 @@ body {
     color: #e9a830 !important;
     font-size: larger; }
 
-.seleccionado {
+.boton_seleccionado {
   transition: 0.5s;
   color: #e9a830 !important; }
 
@@ -243,14 +241,15 @@ a {
 
 /*tour*/
 .descripcion_tour_principal {
-  background-color: #110e0e;
+  background-color: #1b1919;
   margin-top: 105px;
   color: white;
   text-align: center;
   height: 6%;
   font-size: medium; }
-  .descripcion_tour_principal h5 {
-    margin-top: 5px; }
+  .descripcion_tour_principal h1 {
+    margin: 0% !important;
+    color: white; }
 
 .descripcion_tour, .descripcion_tour2 {
   margin-top: 55px;
@@ -266,26 +265,38 @@ a {
 
 /*album*/
 .playlist1, .playlist2, .playlist3 {
-  width: 100%;
+  width: 90%;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
   border-radius: 12px; }
   .playlist1 iframe, .playlist2 iframe, .playlist3 iframe {
     z-index: 2;
-    margin-bottom: -6.5%;
-    height: 480px; }
+    height: 480px;
+    margin-bottom: -4%; }
   .playlist1 h3, .playlist2 h3, .playlist3 h3 {
-    margin-top: 5%;
-    background-color: #1c0101;
+    margin-top: -1%;
+    background-color: #282828;
     z-index: 1;
     height: 30px;
     margin-bottom: -0.2%; }
   .playlist1 h4, .playlist2 h4, .playlist3 h4 {
-    background-color: #1c0101;
+    background-color: #282828;
     z-index: 1;
     font-size: medium;
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%; }
+
+.playlist2 h3 {
+  background-color: #e00707; }
+
+.playlist2 h4 {
+  background-color: #e00707; }
+
+.playlist3 h3 {
+  background-color: #607b8b; }
+
+.playlist3 h4 {
+  background-color: #607b8b; }
 
 .descripcion_album {
   margin-top: 55px !important;
@@ -327,6 +338,12 @@ a {
   color: white;
   border-radius: 1%;
   margin-top: 15vh !important; }
+  .contacto_formulario .descripcion_contacto {
+    background-color: #1b1919; }
+    .contacto_formulario .descripcion_contacto h1 {
+      text-align: center; }
+    .contacto_formulario .descripcion_contacto p {
+      text-align: center; }
 
 .orden_boton_contacto {
   display: flex;
@@ -338,32 +355,60 @@ a {
 
 /*footer*/
 footer {
-  background-color: #3b4e5e;
+  background-color: #364653;
   text-align: center;
-  display: grid;
-  grid-template-areas: "contacto nada redes" "contacto nada redes";
+  display: flex;
+  flex-direction: column-reverse;
+  height: calc(fit-content+1500px);
   width: 100%; }
   footer h1 {
     text-align: center;
     width: 100%;
     color: white !important;
     margin-top: 3%; }
+  footer h5 {
+    color: white;
+    height: fit-content;
+    margin: 0%;
+    margin-top: 15px; }
   footer .contacto {
     display: flex;
     flex-direction: column;
-    grid-area: contacto;
-    justify-content: center; }
+    justify-content: center;
+    width: 100%;
+    background-color: #364653; }
     footer .contacto div {
       display: flex;
       flex-direction: row;
-      color: white; }
+      flex-wrap: nowrap;
+      color: white;
+      height: fit-content;
+      margin-left: 10%; }
+      footer .contacto div i {
+        margin: 0%;
+        margin-top: 15px;
+        margin-left: 15%; }
+      footer .contacto div p {
+        margin: 0%;
+        margin-top: 15px; }
   footer .redes {
-    grid-area: redes;
-    display: flex;
+    display: grid;
+    margin-left: 10%;
+    width: 80%;
+    grid-template-areas: "texto texto texto" "insta twitt youtube";
+    grid-template-columns: 34% 34% 34%;
     flex-direction: column;
-    justify-content: center; }
-    footer .redes i {
-      margin-left: 30%; }
+    justify-content: center;
+    background-color: #364653; }
+    footer .redes h5 {
+      margin-top: 15px;
+      color: white;
+      height: fit-content;
+      margin: 0% !important;
+      grid-area: texto;
+      text-align: center; }
+    footer .redes a .bi {
+      font-size: 1.5rem; }
 
 /*Responsive*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -421,21 +466,24 @@ footer {
   .playlist1, .playlist2, .playlist3 {
     display: block;
     width: 80%;
-    grid-area: a2;
-    margin-left: 10%; }
+    margin-bottom: 50px !important; }
+    .playlist1 h3, .playlist2 h3, .playlist3 h3 {
+      height: fit-content; }
   .logo {
     max-width: 50px;
     max-height: 50px; }
   .playlist2 {
     display: block;
     width: 80%;
-    margin-left: 10%;
-    grid-area: a3; }
+    /*no utilizado @extend debido a error en sass*/ }
+    .playlist2 h3 {
+      height: fit-content; }
   .playlist3 {
     display: block;
     width: 80%;
-    margin-left: 10%;
-    grid-area: a4; }
+    /*no utilizado @extend debido a error en sass*/ }
+    .playlist3 h3 {
+      height: fit-content; }
   .descripcion_album {
     background-color: #232e2e;
     color: white;
@@ -531,6 +579,9 @@ footer {
     .area_descripcion p {
       text-align: center;
       margin: 0%; }
+  /*tour*/
+  .tabla1 {
+    width: 100%; }
   /*album*/
   .playlist1, .playlist2, .playlist3 {
     display: block;
@@ -538,19 +589,21 @@ footer {
     margin-top: 15%;
     z-index: 2; }
     .playlist1 iframe, .playlist2 iframe, .playlist3 iframe {
-      z-index: 2;
-      margin-bottom: -7%;
-      height: 475px; }
+      z-index: 3;
+      margin-bottom: -10%;
+      height: 475px;
+      border-radius: 0%; }
     .playlist1 h3, .playlist2 h3, .playlist3 h3 {
       margin: 0%;
       height: 50px;
-      z-index: 1; }
+      z-index: 4; }
     .playlist1 h4, .playlist2 h4, .playlist3 h4 {
       margin-top: -3%;
-      font-size: large;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      z-index: 1; }
+      font-size: 1fr;
+      border-bottom-left-radius: 10px !important;
+      border-bottom-right-radius: 10px !important;
+      z-index: 1;
+      height: 15%; }
   .playlist2 {
     display: block;
     width: 80%; }
@@ -577,10 +630,11 @@ footer {
     text-align: center; }
   .mainalbum {
     width: 100%;
-    height: 950px; }
+    height: 120vh; }
   /*contacto*/
   .contacto_formulario {
-    margin: 0% 1% 0% 1%; }
+    margin: 0% 30% 0% 30%;
+    width: 40%; }
   /*imagenes*/
   .galeria_imagenes {
     background-color: var(--color_2);
@@ -616,17 +670,23 @@ footer {
     margin-top: 5%;
     justify-content: space-around; }
   .tabla1 {
-    grid-area: a2; }
+    grid-area: a2;
+    width: 85vh; }
+    .tabla1 .table {
+      height: 45vh; }
   .tabla2 {
-    grid-area: a3; }
+    grid-area: a3;
+    width: 85vh; }
+    .tabla2 .table {
+      height: 45vh; }
   .descripcion_tour_principal {
     background-color: #110e0e;
     margin-top: 50px;
     color: white;
     text-align: center;
     height: 85px; }
-    .descripcion_tour_principal h5 {
-      margin-top: 25px; }
+    .descripcion_tour_principal h1 {
+      margin-top: 20px !important; }
   .descripcion_tour2 {
     background-color: #212529;
     border-top-left-radius: 10px;
@@ -638,5 +698,57 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin: 0%; }
-    .descripcion_tour h1, .descripcion_tour2 h1 {
-      margin: 0% !important; } }
+    .descripcion_tour h2, .descripcion_tour2 h2 {
+      margin: 0% !important; }
+  /*footer*/
+  footer {
+    background-color: #3b4e5e;
+    text-align: center;
+    display: grid;
+    height: fit-content;
+    grid-template-areas: "contacto nada redes" "contacto nada redes";
+    width: 100%; }
+    footer h1 {
+      text-align: center;
+      width: 100%;
+      color: white !important;
+      margin-top: 3%; }
+    footer .contacto {
+      display: flex;
+      flex-direction: column;
+      grid-area: contacto;
+      justify-content: center;
+      width: 200px;
+      background-color: #364653;
+      margin-left: 35%; }
+      footer .contacto h5 {
+        color: white;
+        height: fit-content;
+        margin: 0% !important; }
+      footer .contacto div {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        height: fit-content;
+        margin: 0%; }
+        footer .contacto div i {
+          margin: 0%; }
+        footer .contacto div p {
+          margin: 0%; }
+    footer .redes {
+      grid-area: redes;
+      display: grid;
+      width: 300px;
+      grid-template-areas: "texto texto texto" "insta twitt youtube";
+      grid-template-columns: 34% 34% 34%;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #364653; }
+      footer .redes h5 {
+        color: white;
+        height: fit-content;
+        margin: 0% !important;
+        grid-area: texto;
+        text-align: center; }
+      footer .redes i {
+        margin-left: 0%; } }

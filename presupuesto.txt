@@ -1,0 +1,21 @@
+Objetivo:Crear una maqueta web que publicite los conciertos del cliente (RadioHead), donde se muestren los albums que se tocaran,
+	 las imagenes de conciertos anteriores,  los horarios de los conciertos actuales. y con una seccion de consultas (contacto)
+plataformas y herramientas de desarrollo: Visual studio code, GitHub, Animate.css.
+Fases de desarrollo: 1_ Sketch de la pagina y wireframe, 1 dia
+		     2_ Prototipado de la pagina, 1 dias
+		     3_ Creacion de la pagina, 6 dias
+alojamiento: Host a pago desde hostinger, hosting premium
+
+Presupuesto: Alojamiento de la web *1 - 800$/mes *2
+	     Mano de obra             - 21000$
+	     Mantenimiento  *3	      - 1000$/mes 
+
+	     Total                    - 1800$/mes y 21000$
+	     Anticipo                 - 1800$       10500$
+
+
+
+referencias:
+	*1: (incluidos SEO, Analitics, Bases de datos, dominio, proteccion cloud)
+	*2: pagando por 1 año.
+	*3: (incluye mantenimiento del hosting, actualizacion de plugins y contenidos, no incluye cambios de diseño ni nuevas paginas)
