@@ -1,6 +1,30 @@
 @import "variables/variables";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-/*animation fade-in-top*/
+/*animaciones*/
+@-webkit-keyframes fade-in-right {
+    0% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-right {
+    0% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
  @-webkit-keyframes fade-in-top {
     0% {
     -webkit-transform: translateY(-50px);
@@ -49,6 +73,10 @@
     opacity: 1;
     }
   }
+.fade-in-right {
+	-webkit-animation: fade-in-right 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 .fade-in-top {
 	-webkit-animation: fade-in-top 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in-top 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -220,10 +248,10 @@ a{
             width: 80%;
             background-color: rgba(18, 20, 27, 0.6);
             .imagen_ticket{
-                width: 95%;
-                height: 35%;
+                max-width: 70%;
+                height: auto;
                 background-color:transparent;
-                margin-left: 2.5%;
+                margin-left: 15% !important;
                 margin-top: 1.5%;
             }
             .descripcion_ticket{
@@ -239,27 +267,6 @@ a{
                     background-color: rgba(18, 20, 27, 1.0);
                     border-color: rgba(1, 21, 94, 0.651);
                 }
-            }
-            .ticket3{
-                background-image: url(../img/ticket_VIP.png);
-                background-size: 60%;
-                background-position: center;
-                background-repeat: no-repeat;
-                &:focus{
-                    @extend .fade-in-left
-                }
-            }
-            .ticket2{
-                background-image: url(../img/ticket_premium.png);
-                background-size: 60%;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            .ticket1{
-                background-image: url(../img/ticket_basico.png);
-                background-size: 60%;
-                background-position: center;
-                background-repeat: no-repeat;
             }
         }
     }
@@ -284,6 +291,16 @@ a{
     h1{
         margin:0% !important;
         color: white;
+    }
+}
+.zona_tour{
+    .tabla1{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .tabla2{
+        width: 90%;
+        margin-left: 5%;
     }
 }
 .descripcion_tour{
@@ -505,27 +522,18 @@ footer{
                 width: 80%;
                 background-color: rgba(18, 20, 27, 0.6);
                 .imagen_ticket{
-                    width: 95%;
-                    height: 35%;
+                    max-width: 25%;
+                    height: auto;
                     background-color:transparent;
-                    margin-left: 2.5%;
+                    margin-left: 38% !important;
                     margin-top: 1.5%;
                 }
                 .descripcion_ticket{
-                    width: 95%;
+                    max-width: 95%;
                     height: 45%;
                     margin-left: 2.5%;
                     margin-top: 3.5%;
                     text-align: center;
-                }
-                .ticket3{
-                    background-size: 40%;
-                }
-                .ticket2{
-                    background-size: 40%;
-                }
-                .ticket1{
-                    background-size: 40%;
                 }
             }
         }
@@ -752,8 +760,8 @@ footer{
     }
     /*contacto*/
     .contacto_formulario{
-        margin:0% 30% 0% 30%;
-        width: 40%;
+        margin:0% 25% 0% 25%;
+        width: 50%;
     }
     /*imagenes*/
     .galeria_imagenes{
@@ -769,7 +777,28 @@ footer{
         img{
             width: 100%;
             height: 98.5%;
+            transition: 1s;
+            &:hover{
+                transition: 2s;
+                position:relative;
+                max-width: 110%;
+                width: 110%;
+                height: auto;
+                margin-left: -5%;
+            }
         }
+        .animacion_izquierda_imagen_galeria{
+            &:hover{
+                margin-left: -2%;
+            }
+            
+        }
+        .animacion_derecha_imagen_galeria{
+            &:hover{
+                margin-left: 1%;
+            }
+        }
+        
     }
     /*tour*/
     .area_descripcion{
@@ -804,14 +833,16 @@ footer{
     }
     .tabla1{
         grid-area: a2;
-        width: 85vh;
+        width: 85vh !important;
+        margin: 0% !important;
         .table{
             height: 45vh;
         }
     }
     .tabla2{
         grid-area: a3;
-        width: 85vh;
+        width: 85vh !important;
+        margin: 0% !important;
         .table{
             height: 45vh;
         }

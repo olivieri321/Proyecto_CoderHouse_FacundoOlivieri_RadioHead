@@ -1,5 +1,25 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-/*animation fade-in-top*/
+/*animaciones*/
+@-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
 @-webkit-keyframes fade-in-top {
   0% {
     -webkit-transform: translateY(-50px);
@@ -40,11 +60,15 @@
     transform: translateX(0);
     opacity: 1; } }
 
+.fade-in-right {
+  -webkit-animation: fade-in-right 1.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-right 1.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
 .fade-in-top {
   -webkit-animation: fade-in-top 1.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-top 1.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
-.fade-in-left, .gif2 .area_descripcion .caja_ticket .ticket3:focus {
+.fade-in-left {
   -webkit-animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
@@ -197,10 +221,10 @@ a {
       width: 80%;
       background-color: rgba(18, 20, 27, 0.6); }
       .gif2 .area_descripcion .caja_ticket .imagen_ticket {
-        width: 95%;
-        height: 35%;
+        max-width: 70%;
+        height: auto;
         background-color: transparent;
-        margin-left: 2.5%;
+        margin-left: 15% !important;
         margin-top: 1.5%; }
       .gif2 .area_descripcion .caja_ticket .descripcion_ticket {
         width: 95%;
@@ -214,21 +238,6 @@ a {
           margin-top: 15%;
           background-color: #12141b;
           border-color: rgba(1, 21, 94, 0.651); }
-      .gif2 .area_descripcion .caja_ticket .ticket3 {
-        background-image: url(../img/ticket_VIP.png);
-        background-size: 60%;
-        background-position: center;
-        background-repeat: no-repeat; }
-      .gif2 .area_descripcion .caja_ticket .ticket2 {
-        background-image: url(../img/ticket_premium.png);
-        background-size: 60%;
-        background-position: center;
-        background-repeat: no-repeat; }
-      .gif2 .area_descripcion .caja_ticket .ticket1 {
-        background-image: url(../img/ticket_basico.png);
-        background-size: 60%;
-        background-position: center;
-        background-repeat: no-repeat; }
 
 .descripcion_presentacion_home {
   display: block;
@@ -250,6 +259,14 @@ a {
   .descripcion_tour_principal h1 {
     margin: 0% !important;
     color: white; }
+
+.zona_tour .tabla1 {
+  width: 90%;
+  margin-left: 5%; }
+
+.zona_tour .tabla2 {
+  width: 90%;
+  margin-left: 5%; }
 
 .descripcion_tour, .descripcion_tour2 {
   margin-top: 55px;
@@ -436,23 +453,17 @@ footer {
         width: 80%;
         background-color: rgba(18, 20, 27, 0.6); }
         .gif2 .area_descripcion .caja_ticket .imagen_ticket {
-          width: 95%;
-          height: 35%;
+          max-width: 25%;
+          height: auto;
           background-color: transparent;
-          margin-left: 2.5%;
+          margin-left: 38% !important;
           margin-top: 1.5%; }
         .gif2 .area_descripcion .caja_ticket .descripcion_ticket {
-          width: 95%;
+          max-width: 95%;
           height: 45%;
           margin-left: 2.5%;
           margin-top: 3.5%;
           text-align: center; }
-        .gif2 .area_descripcion .caja_ticket .ticket3 {
-          background-size: 40%; }
-        .gif2 .area_descripcion .caja_ticket .ticket2 {
-          background-size: 40%; }
-        .gif2 .area_descripcion .caja_ticket .ticket1 {
-          background-size: 40%; }
   .area2 {
     background-image: image("img/integrantes.jfif"); }
   .navegacion {
@@ -633,8 +644,8 @@ footer {
     height: 120vh; }
   /*contacto*/
   .contacto_formulario {
-    margin: 0% 30% 0% 30%;
-    width: 40%; }
+    margin: 0% 25% 0% 25%;
+    width: 50%; }
   /*imagenes*/
   .galeria_imagenes {
     background-color: var(--color_2);
@@ -645,7 +656,19 @@ footer {
     width: 100%; }
     .galeria_imagenes img {
       width: 100%;
-      height: 98.5%; }
+      height: 98.5%;
+      transition: 1s; }
+      .galeria_imagenes img:hover {
+        transition: 2s;
+        position: relative;
+        max-width: 110%;
+        width: 110%;
+        height: auto;
+        margin-left: -5%; }
+    .galeria_imagenes .animacion_izquierda_imagen_galeria:hover {
+      margin-left: -2%; }
+    .galeria_imagenes .animacion_derecha_imagen_galeria:hover {
+      margin-left: 1%; }
   /*tour*/
   .area_descripcion {
     height: 100%; }
@@ -671,12 +694,14 @@ footer {
     justify-content: space-around; }
   .tabla1 {
     grid-area: a2;
-    width: 85vh; }
+    width: 85vh !important;
+    margin: 0% !important; }
     .tabla1 .table {
       height: 45vh; }
   .tabla2 {
     grid-area: a3;
-    width: 85vh; }
+    width: 85vh !important;
+    margin: 0% !important; }
     .tabla2 .table {
       height: 45vh; }
   .descripcion_tour_principal {
