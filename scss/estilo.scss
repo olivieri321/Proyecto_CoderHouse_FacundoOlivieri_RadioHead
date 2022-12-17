@@ -601,7 +601,8 @@ footer{
         flex-direction:column;
     }
     .contacto_formulario{
-        margin:0% 1% 0% 1%;
+        margin-left: 5%;
+        margin-top: 15vh;
     }
     .galeria_imagenes{
         background-color: $color_2;
@@ -835,7 +836,7 @@ footer{
     }
     .tabla1{
         grid-area: a2;
-        width: 85vh !important;
+        width: 65vh !important;
         margin: 0% !important;
         .table{
             height: 45vh;
@@ -843,7 +844,7 @@ footer{
     }
     .tabla2{
         grid-area: a3;
-        width: 85vh !important;
+        width: 65vh !important;
         margin: 0% !important;
         .table{
             height: 45vh;
