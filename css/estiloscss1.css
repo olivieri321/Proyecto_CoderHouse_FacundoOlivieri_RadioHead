@@ -354,6 +354,8 @@ a {
   background-color: #3b4e5e;
   color: white;
   border-radius: 1%;
+  width: 90%;
+  margin-left: 5%;
   margin-top: 15vh !important; }
   .contacto_formulario .descripcion_contacto {
     background-color: #1b1919; }
