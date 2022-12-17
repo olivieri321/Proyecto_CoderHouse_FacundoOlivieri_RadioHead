@@ -664,7 +664,8 @@ footer {
         max-width: 110%;
         width: 110%;
         height: auto;
-        margin-left: -5%; }
+        margin-left: -5%;
+        z-index: 3; }
     .galeria_imagenes .animacion_izquierda_imagen_galeria:hover {
       margin-left: -2%; }
     .galeria_imagenes .animacion_derecha_imagen_galeria:hover {
